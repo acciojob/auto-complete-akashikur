@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Autocomplete = ({ options }) => {
   const [inputValue, setInputValue] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState([...options]);
 
   const handleInputChange = (event) => {
     const newInputValue = event.target.value;
